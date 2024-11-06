@@ -90,7 +90,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         </div>
 
         {/* Invoice Status */}
-        <fieldset aria-describedby="status-error">
+        <fieldset>
           <legend className="mb-2 block text-sm font-medium">
             Set the invoice status
           </legend>
@@ -104,6 +104,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
                   type="radio"
                   value="pending"
                   className="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
+                  aria-describedby="status-error"
                 />
                 <label
                   htmlFor="pending"
