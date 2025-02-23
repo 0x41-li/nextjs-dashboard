@@ -15,7 +15,7 @@ export default async function Page({
     page?: string;
   }>;
 }) {
-  let { query = "", page = "1" } = await searchParams;
+  const { query = "", page = "1" } = await searchParams;
 
   const currentPage = Number(page);
 

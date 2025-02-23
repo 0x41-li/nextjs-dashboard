@@ -60,7 +60,7 @@ export const createInvoice = async (prevState: State, formData: FormData) => {
     VALUES
       (${customerId}, ${amountInCents}, ${status}, ${date})
   `;
-  } catch (error) {
+  } catch () {
     return { message: "Database Error: Failed to create invoice" };
   }
 
@@ -93,7 +93,7 @@ export const updateInvoice = async (
     set customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
     WHERE id = ${id}
   `;
-  } catch (error) {
+  } catch () {
     return { message: "Database Error: Failed to update invoice" };
   }
 
